@@ -28,3 +28,8 @@ To stop the lab:
    - http://localhost:8080/realms/mfa-lab/account
 6. Log in as that user and complete the OTP enrollment (scan the QR code in an authenticator app).
 7. Log out and log in again — you should be prompted for the OTP code.
+
+## Security notes
+- `.env` is intentionally ignored by Git to avoid committing passwords/secrets.
+- The values in `.env.example` are placeholders—change them before running.
+- This is a learning lab and uses Keycloak `start-dev` (not production hardening).
