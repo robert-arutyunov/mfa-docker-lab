@@ -10,7 +10,7 @@ A containerized lab project to learn and demonstrate multi-factor authentication
 ## Quick start (Windows PowerShell)
 1.  Copy the example env file:
    ```powershell
-   copy .env.example .env
+   copy .env.example .env```
 2. Start the lab: 
     docker compose up -d
 3. Open Keycloak:
