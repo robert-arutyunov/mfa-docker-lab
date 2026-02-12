@@ -13,11 +13,15 @@ A containerized lab project to learn and demonstrate multi-factor authentication
    copy .env.example .env
    ```
 2. Start the lab: 
+    ```powershell
     docker compose up -d
+    ```
 3. Open Keycloak:
     http://localhost:8080
 To stop the lab:
+    ```powershell
     docker compose down
+    ```
 
 ## Verify MFA (TOTP) is enforced
 1. Log into the Keycloak Admin Console:
