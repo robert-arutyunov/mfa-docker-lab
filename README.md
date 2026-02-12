@@ -1,11 +1,13 @@
 # MFA Docker Lab
 
-A containerized lab project to learn and demonstrate multi-factor authentication (MFA) concepts using Docker.
+A containerized lab project to learn and demonstrate multi-factor authentication (MFA) concepts using Keycloak (TOTP) and Docker Compose.
 
-## Current status
-- Docker Compose skeleton in place
+## What this lab includes
+- Keycloak + Postgres running in Docker
+- Realm export committed to the repo for repeatable setup
+- Auto-import of the realm on startup
 
-## Planned
-- Add an authentication flow with MFA (TOTP)
-- Add basic audit logging
-- Document how to run the lab locally
+## Quick start (Windows PowerShell)
+1. Copy the example env file:
+   ```powershell
+   copy .env.example .env
