@@ -2,26 +2,36 @@
 
 A containerized lab project to learn and demonstrate multi-factor authentication (MFA) concepts using Keycloak (TOTP) and Docker Compose.
 
+> This is a local Docker lab. To run it, you’ll need Docker Desktop (or Docker Engine) on your machine.
+
 ## What this lab includes
 - Keycloak + Postgres running in Docker
 - Realm export committed to the repo for repeatable setup
 - Auto-import of the realm on startup
 
+
+
 ## Quick start (Windows PowerShell)
-1.  Copy the example env file:
+1.  Get the project:
+     ```powershell
+    git clone https://github.com/robert-arutyunov/mfa-docker-lab.git
+    cd mfa-docker-lab
+    ```
+2.  Copy the example env file:
    ```powershell
    copy .env.example .env
    ```
-2. Start the lab: 
+3. Start the lab: 
     ```powershell
     docker compose up -d
     ```
-3. Open Keycloak:
-    http://localhost:8080
+4. Open Keycloak:
+   - http://localhost:8080
+
 To stop the lab:
-    ```powershell
-    docker compose down
-    ```
+```powershell
+docker compose down
+```
 
 ## Verify MFA (TOTP) is enforced
 1. Log into the Keycloak Admin Console:
