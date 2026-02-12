@@ -1,22 +1,9 @@
-services:
-  postgres:
-    image: postgres:16
-    container_name: mfa-postgres
-    environment:
-      POSTGRES_DB: keycloak
-      POSTGRES_USER: keycloak
-      POSTGRES_PASSWORD: keycloakpass
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    networks:
-      - internal
-
   keycloak:
     image: quay.io/keycloak/keycloak:26.0.0
     container_name: mfa-keycloak
     depends_on:
       - postgres
-    command: start-dev
+    command: start-dev --import-realm
     environment:
       KC_DB: postgres
       KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
@@ -26,11 +13,7 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: adminpass
     ports:
       - "8080:8080"
+    volumes:
+      - ./keycloak-import:/opt/keycloak/data/import
     networks:
       - internal
-
-volumes:
-  pgdata:
-
-networks:
-  internal:
