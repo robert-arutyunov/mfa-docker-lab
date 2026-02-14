@@ -12,22 +12,22 @@ A containerized lab project to learn and demonstrate multi-factor authentication
 
 
 ## Quick start (Windows PowerShell)
-1.  Get the project:
+1. Get the project:
     ```powershell
     git clone https://github.com/robert-arutyunov/mfa-docker-lab.git
     cd mfa-docker-lab
     dir
     ```
-   You should see `docker-compose.yml` in the output.
+    You should see `docker-compose.yml` in the output.
 
-2.  Create your local `.env` file:
+2. Create your local `.env` file:
    ```powershell
    copy .env.example .env
    notepad .env
    ```
    Replace the `change-me` values, save, and close Notepad.
 
-3. Start the lab (powershell): 
+3. Start the lab: 
     ```powershell
     docker compose up -d
     ```
