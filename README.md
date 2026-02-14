@@ -13,9 +13,9 @@ A containerized lab project to learn and demonstrate multi-factor authentication
 
 ## Quick start (Windows PowerShell)
 1.  Get the project:
-     ```powershell
-    git clone https://github.com/robert-arutyunov/mfa-docker-lab.git
-    cd mfa-docker-lab
+    ```powershell
+   git clone https://github.com/robert-arutyunov/mfa-docker-lab.git
+   cd mfa-docker-lab
     ```
 2.  Copy the example env file:
    ```powershell
@@ -23,7 +23,7 @@ A containerized lab project to learn and demonstrate multi-factor authentication
    ```
 3. Start the lab: 
     ```powershell
-    docker compose up -d
+   docker compose up -d
     ```
 4. Open Keycloak:
    - http://localhost:8080
