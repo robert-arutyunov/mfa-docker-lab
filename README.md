@@ -17,11 +17,14 @@ A containerized lab project to learn and demonstrate multi-factor authentication
     git clone https://github.com/robert-arutyunov/mfa-docker-lab.git
     cd mfa-docker-lab
     ```
-2.  Copy the example env file:
+2.  Create your local `.env` file:
    ```powershell
    copy .env.example .env
+   notepad .env
    ```
-3. Start the lab: 
+   Replace the `change-me` values, save, and close Notepad.
+
+3. Start the lab (powershell): 
     ```powershell
     docker compose up -d
     ```
